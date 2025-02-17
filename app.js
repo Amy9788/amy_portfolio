@@ -4,7 +4,7 @@ const fs = require('fs'); // fs module - load the JSON file and pass the data to
 const express = require('express');  // Express web framework. It simplifies handling HTTP requests and managing routing.
 // Create an Express Application
 const app = express(); 
-
+const port = process.env.PORT || 4000;
 // Set EJS as templating engine 
 app.set('view engine', 'ejs');
 
@@ -26,6 +26,6 @@ app.get('/', (req, res) => {
 });
 
 // Server setup 
-app.listen(3000, function (req, res) { 
-	console.log('Server running at http://127.0.0.1:3000');
+app.listen(port, function (req, res) { 
+	console.log(`Example app listening on port ${port}`)
 });
