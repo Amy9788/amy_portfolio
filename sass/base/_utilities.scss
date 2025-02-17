@@ -1,0 +1,50 @@
+// Padding for left and right
+.sm-padding {
+    padding: 0 3.2rem;
+}
+
+.md-padding {
+    padding: 0 6.4rem;
+    @include respond(small-tablet) {
+        padding: 0 3.2rem;
+    }
+}
+
+.sm-margin-top{
+    margin-bottom: 5rem;
+}
+
+.sm-margin-bottom{
+    margin-bottom: 3rem;
+}
+
+// Margin-bottom between each section
+.md-margin-bottom{
+    margin-bottom: 10rem;
+    @include respond(tab-port) {
+        margin-bottom: 5rem;
+    }
+}
+
+
+// Width
+.md-width{
+    max-width: 60rem;
+    @include respond(phone) {
+        max-width: 30rem;
+    }
+}
+
+// Display the item in mobile devices
+.mobile-item{
+    display: none;
+    @include respond(tab-port) {
+        display: block;
+    }
+
+    img{
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}

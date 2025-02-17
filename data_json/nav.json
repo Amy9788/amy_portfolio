@@ -1,0 +1,25 @@
+{
+    "nav_list":{
+        "nav_item1":{
+            "name":"About",
+            "class_item": "nav__list-item",
+            "class_link": "nav__list-item-link",
+            "style": "--i: .6s",
+            "href":"#about-me"
+        },
+        "nav_item2":{
+            "name":"Projects",
+            "class_item": "nav__list-item",
+            "class_link": "nav__list-item-link",
+            "style": "--i: .86s",
+            "href":"#projects"
+        },
+        "nav_item3":{
+            "name":"Get In Touch",
+            "class_item": "nav__list-item",
+            "class_link": "nav__list-item-link",
+            "style": "--i: 1.1s",
+            "href":"#contact"
+        }
+    }
+}

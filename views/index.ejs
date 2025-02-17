@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Rashi+Hebrew:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Rashi+Hebrew:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Amy's Portfolio</title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <header class="header sm-padding md-margin-bottom">
+        <div class="header__text_box md-padding">
+            <h1 class="heading-primary">
+                <span class="heading-primary__part1">
+                    Hi, I'm Amy,
+                </span>
+                <span class="heading-primary__part2"> Web designer</span>
+                <span class="heading-primary__part3">and Web developer</span>
+            </h1>
+            <div class="heading-passage">
+                I build functional and elegant websites for individuals and businesses. 
+                If you are in need of a website, please reach out to me and we can discuss your needs.
+            </div>
+            <a href="#projects" class="btn btn__green">Projects</a>
+        </div>
+    </header>
+    <main class="main sm-padding">
+        <section class="section-projects md-margin-bottom" id="projects">
+            <% for (let key in projects_data["projects"]) { %>
+                <div class="section-projects__item">
+                    <div class="section-projects__item-left">
+                        <h3 class="heading-tertiary">
+                            <%= projects_data["projects"][key].name %>
+                        </h3>
+                        <h2 class="heading-secondary">
+                            <span class="heading-secondary__part1">
+                                <%= projects_data["projects"][key].heading_secondary__part1 %>
+                            </span>
+                            <span class="heading-secondary__part2">
+                                <%= projects_data["projects"][key].heading_secondary__part2 %>
+                            </span>
+                        </h2>
+                        <p class="paragraph paragraph-black md-width">
+                            <%= projects_data["projects"][key].desc %>
+                        </p>
+                        <div class="mobile-item sm-margin-top">
+                            <img src="<%= projects_data["projects"][key].img_src %>" class="project-img"/>
+                        </div>
+                        <a href="/templates/project1.html" class="btn btn__green">
+                            <%= projects_data["projects"][key].btn_type %>
+                        </a>
+                    </div>
+                    <div class="section-projects__item-right">
+                        <img src=" <%= projects_data["projects"][key].img_src %>" class="project-img"/>
+                    </div>
+                </div>
+            <% } %>
+        </section>
+        <section class="section-about md-margin-bottom" id="about-me">
+            <h4 class="heading-quaternary">
+                <span>What</span>&nbsp;
+                <span class="heading-quaternary__color-part"> I do</span>
+            </h4>
+            <div class="section-about__content">
+               <div class="section-about__item">
+                   <div class="section-about__item-icon">
+                        <img src="/assets/icon/design_icon.svg"/>
+                   </div>
+                   <div class="section-about__item-text">
+                        <h5 class="heading-quinary">Designs</h5>
+                        <p class="paragraph paragraph-sm md-width">
+                            Websites are the front faces of businesses. 
+                            We can work together to create a site that will 
+                            capture customers attention and bring your vision into life.
+                        </p>
+                   </div>
+               </div>
+
+               <div class="section-about__item">
+                    <div class="section-about__item-icon">
+                        <img src="/assets/icon/code_icon.svg"/>
+                    </div>
+                    <div class="section-about__item-text">
+                        <h5 class="heading-quinary">Web Development</h5>
+                        <p class="paragraph paragraph-sm md-width">
+                            With my experience and expertise of building websites from scratch 
+                            or with the help of Webflow, I am excited to help launch your business website. 
+                            Following my services, you will be given access to edit your site with ease, 
+                            giving you control over your desired designs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-contact sm-margin-bottom" id="contact">
+            <div class="section-contact__content sm-padding">
+                <p class="paragraph paragraph-white">If you are ready to take on this journey with me, send me an email.</p>
+                <a href="mailto:contact@designwithamy.com" class="btn btn__white">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/js/index.js"></script>
+</body>
+</html>

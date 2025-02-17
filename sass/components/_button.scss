@@ -1,0 +1,39 @@
+.btn{
+    &,
+    &:link,
+    &:visited {
+        font-size: 2rem;
+        text-decoration: none;
+        border: none;
+        transition: all .2s;
+        cursor: pointer;
+        padding: 1.5rem 4rem;
+    }
+    &:hover {
+        transform: translateY(-3px);
+    }
+    &__green{
+        &,
+        &:link,
+        &:visited {
+            color: $white-color;
+            background-color: $green-color;
+        }
+
+        &:hover {
+            background-color: $dark-gray-color;
+        } 
+    }
+    &__white{
+        &,
+        &:link,
+        &:visited {
+            color: $black-color;
+            background-color: $white-color;
+        }
+
+        &:hover {
+            background-color: $dark-gray-color;
+        } 
+    }
+}

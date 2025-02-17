@@ -1,0 +1,14 @@
+.header{
+  
+    &__text_box{
+        height: 85vh;
+        background-image: url(/assets/img/hero_section_bg.svg);
+        background-size: cover;
+        background-position: bottom;
+        border-radius: $radius;
+    }
+   
+    // position: relative;
+
+    // margin-bottom: 10rem;
+}

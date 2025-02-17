@@ -1,0 +1,45 @@
+.section-projects{
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8rem;
+        gap: 2rem;
+    }
+    &__item-right{
+        @include respond(tab-port) {
+            display: none;
+        }
+        .project-img{
+            width: 100%;
+        }
+    }
+}
+
+.section-about{
+    &__item{
+        display: flex;
+        gap: 3rem;
+        @include respond(phone) {
+            flex-direction: column;
+            margin-bottom: 3rem;
+        }
+    }
+    &__item-icon img{
+        width: 10rem;
+    }
+}
+.section-contact{
+    background-image: url(/assets/img/contact_bg.svg);
+    height: 35vh;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    &__content{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+}

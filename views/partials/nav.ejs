@@ -1,0 +1,24 @@
+<div class="nav sm-padding">
+    <nav class="nav__wrapper">
+        <input type="checkbox" name="check" id="check">
+        <div class="logo">
+            <a href="#">Portfolio.</a>
+        </div>
+        <div class="nav__list-container">
+            <ul class="nav__list">
+                <% for (let key in nav_data["nav_list"]) { %>
+                    <li class="<%= nav_data["nav_list"][key].class_item %>" style="<%= nav_data["nav_list"][key].style %>">
+                        <a href="<%= nav_data["nav_list"][key].href %>" class="<%= nav_data["nav_list"][key].class_link %>">
+                            <%= nav_data["nav_list"][key].name %>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="hamburger-menu">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+    </nav>
+</div>

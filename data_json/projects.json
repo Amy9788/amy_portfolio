@@ -1,0 +1,28 @@
+{
+    "projects":{
+        "Project_1":{
+            "name":"Project 1",
+            "heading_secondary__part1":"Jireh",
+            "heading_secondary__part2":"",
+            "img_src": "/assets/img/Jireh_project.svg",
+            "desc":"In 2024, I assisted Jireh with the development of their website. After completing a web design class, I decided to apply the skills I had acquired to rebuild the website. Unfortunately, their hosting service doesn't support Node.js, which I had planned to use to implement three different languages for the website. As a result, I opted to complete the redesign as a case study project instead. I'll provide both links below.",
+            "btn_type":"See Full Project"
+        },
+        "Project_2":{
+            "name":"Project 2",
+            "heading_secondary__part1":"LOTUS GARDEN",
+            "heading_secondary__part2":"BISTRO",
+            "img_src": "/assets/img/lotus_garden_bistro_project.svg",
+            "desc":"This is a homepage design and build for a conceptual restaurant project. I have designed this page to showcase the envisioned concept.",
+            "btn_type":"Case Study"
+        },
+        "Project_3":{
+            "name":"Project 3",
+            "heading_secondary__part1":"PINNACLE",
+            "heading_secondary__part2":"UNIVERSITY",
+            "img_src": "/assets/img/pinnacle_university_project.svg",
+            "desc":"This is a homepage design for a conceptual university project. I have designed this page to showcase the envisioned concept.",
+            "btn_type":"Case Study"
+        }
+    }
+}
