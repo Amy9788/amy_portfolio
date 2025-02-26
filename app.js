@@ -21,6 +21,10 @@ app.use((req, res, next) => {
     next(); // Proceed to the next middleware or route handler
 });
 
+app.get('/projects/project:projectNumber', (req, res) => {
+    const projectNumber = req.params.projectNumber;
+    res.render(`project${ projectNumber }`);
+});
 app.get('/', (req, res) => {
     res.render('index');
 });

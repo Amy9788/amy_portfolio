@@ -11,7 +11,7 @@
 }
 
 .sm-margin-top{
-    margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .sm-margin-bottom{
@@ -26,14 +26,24 @@
     }
 }
 
+.sm-margin-left{
+    margin-left: 2rem;
+}
 
 // Width
-.md-width{
-    max-width: 60rem;
+.lg-width{
+    max-width: 65rem;
     @include respond(phone) {
         max-width: 30rem;
     }
 }
+.md-width{
+    max-width: 55rem;
+    @include respond(phone) {
+        max-width: 30rem;
+    }
+}
+
 
 // Display the item in mobile devices
 .mobile-item{
@@ -48,3 +58,8 @@
         }
     }
 }
+
+.text-center{
+    text-align: center;
+}
+

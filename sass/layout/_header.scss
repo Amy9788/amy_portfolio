@@ -1,14 +1,13 @@
 .header{
-  
     &__text_box{
-        height: 85vh;
-        background-image: url(/assets/img/hero_section_bg.svg);
+        height: 80vh;
+        background-image: url(/assets/img/hero_section_bg.webp);
         background-size: cover;
         background-position: bottom;
         border-radius: $radius;
+        @include respond(phone) {
+            height: 85vh;
+        }
     }
-   
-    // position: relative;
-
-    // margin-bottom: 10rem;
 }
+

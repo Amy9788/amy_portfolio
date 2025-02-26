@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/assets/img/hero_section_bg.webp" as="image">
+    <title>Pinnacle University Project</title>
+
+    <!-- SEO -->
+    <meta property="og:image" content="https://designwithamy.com/assets/logo.svg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:type" content="image/webp">
+    <meta name="description" content="This is a homepage design for a conceptual university project. I have designed this page to showcase the envisioned concept.">
+    <meta name="title" content="Amy - Web Designer & Developer | Custom Websites | Pinnacle University project">
+    <meta property="og:url" content="https://jirehrecycle.com">
+    <meta property="og:title" content="Amy - Web Designer & Developer | Custom Websites | Pinnacle University project">
+    <meta property="og:description" content="This is a homepage design for a conceptual university project. I have designed this page to showcase the envisioned concept.">
+
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <main class="md-padding">
+        <section class="project__content">
+            <p class="heading-tertiary text-center">
+                PROJECT SHOWCASE
+            </p>
+            <h2 class="heading-secondary text-center">
+                PINNACLE UNIVERSITY
+            </h2>
+            <p class="paragraph">
+                TThis is a homepage design for a conceptual university project. I have designed this page to showcase the envisioned concept.
+            </p>
+            <div class="tag">
+                <ul class="tag__list">
+                    <li class="tag__item">figma</li>
+                </ul>
+            </div>
+            <div class="text-center">
+                <!-- <div class="btn btn__with-icon">
+                    <a href="https://jirehrecycle.com">
+                        <span class="left-text">Visit live site</span>
+                        <span class="right-icon">
+                            <img src="/assets/img/arrow_forward.svg" class="arrow-forward-icon" alt="arrow-forward-icon"/>
+                        </span>
+                    </a>
+                </div> -->
+            </div>
+            <div class="project__showcase">
+                <img src="/assets/img/pinnacle_university_full.jpg" class="showcase-img" alt="showcase jireh project image" width="670" height="1554" />
+            </div>
+        </section>
+        <%- include('partials/contact') %>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="/js/index.js" defer></script>
+</body>
+</html>

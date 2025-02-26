@@ -1,0 +1,16 @@
+.section-contact{
+    background-image: url(/assets/img/contact_bg.svg);
+    height: 25vh;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+
+    &__content{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+}

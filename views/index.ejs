@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Rashi+Hebrew:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Rashi+Hebrew:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="preload" href="/assets/img/hero_section_bg.webp" as="image">
     <title>Amy's Portfolio</title>
+
+    <!-- SEO -->
+    <meta property="og:image" content="https://designwithamy.com/assets/logo.svg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:image:type" content="image/webp">
+    <meta name="description" content="Amy is a Web designer and a Web developer, creating functional, responsive, and elegant websites for businesses and individuals.">
+    <meta name="title" content="Amy - Web Designer & Developer | Custom Websites">
+    <meta property="og:url" content="https://jirehrecycle.com">
+    <meta property="og:title" content="Amy - Web Designer & Developer | Custom Websites">
+    <meta property="og:description" content="Amy is a Web designer and a Web developer, creating functional, responsive, and elegant websites for businesses and individuals.">
+
 </head>
 <body>
     <%- include('partials/nav') %>
@@ -26,14 +41,14 @@
             <a href="#projects" class="btn btn__green">Projects</a>
         </div>
     </header>
-    <main class="main sm-padding">
+    <main class="main md-padding">
         <section class="section-projects md-margin-bottom" id="projects">
             <% for (let key in projects_data["projects"]) { %>
                 <div class="section-projects__item">
                     <div class="section-projects__item-left">
-                        <h3 class="heading-tertiary">
+                        <p class="heading-tertiary">
                             <%= projects_data["projects"][key].name %>
-                        </h3>
+                        </p>
                         <h2 class="heading-secondary">
                             <span class="heading-secondary__part1">
                                 <%= projects_data["projects"][key].heading_secondary__part1 %>
@@ -46,30 +61,30 @@
                             <%= projects_data["projects"][key].desc %>
                         </p>
                         <div class="mobile-item sm-margin-top">
-                            <img src="<%= projects_data["projects"][key].img_src %>" class="project-img"/>
+                            <img src="<%= projects_data["projects"][key].img_src %>" width="500" height="480" class="project-img" alt="<%= projects_data["projects"][key].alt %>"/>
                         </div>
-                        <a href="/templates/project1.html" class="btn btn__green">
+                        <a href="/projects/project<%= projects_data["projects"][key].number%>" class="btn btn__green">
                             <%= projects_data["projects"][key].btn_type %>
                         </a>
                     </div>
                     <div class="section-projects__item-right">
-                        <img src=" <%= projects_data["projects"][key].img_src %>" class="project-img"/>
+                        <img src=" <%= projects_data["projects"][key].img_src %>" width="1000" height="800" class="project-img" alt="<%= projects_data["projects"][key].alt %>"/>
                     </div>
                 </div>
             <% } %>
         </section>
         <section class="section-about md-margin-bottom" id="about-me">
-            <h4 class="heading-quaternary">
+            <p class="heading-quaternary">
                 <span>What</span>&nbsp;
                 <span class="heading-quaternary__color-part"> I do</span>
-            </h4>
+            </p>
             <div class="section-about__content">
                <div class="section-about__item">
                    <div class="section-about__item-icon">
-                        <img src="/assets/icon/design_icon.svg"/>
+                        <img src="/assets/icon/design_icon.svg" alt="design icon" width="100" height="100"/>
                    </div>
                    <div class="section-about__item-text">
-                        <h5 class="heading-quinary">Designs</h5>
+                        <p class="heading-quinary">Designs</p>
                         <p class="paragraph paragraph-sm md-width">
                             Websites are the front faces of businesses. 
                             We can work together to create a site that will 
@@ -80,10 +95,10 @@
 
                <div class="section-about__item">
                     <div class="section-about__item-icon">
-                        <img src="/assets/icon/code_icon.svg"/>
+                        <img src="/assets/icon/code_icon.svg" alt="coding icon" width="100" height="100"/>
                     </div>
                     <div class="section-about__item-text">
-                        <h5 class="heading-quinary">Web Development</h5>
+                        <p class="heading-quinary">Web Development</p>
                         <p class="paragraph paragraph-sm md-width">
                             With my experience and expertise of building websites from scratch 
                             or with the help of Webflow, I am excited to help launch your business website. 
@@ -94,14 +109,10 @@
                 </div>
             </div>
         </section>
-        <section class="section-contact sm-margin-bottom" id="contact">
-            <div class="section-contact__content sm-padding">
-                <p class="paragraph paragraph-white">If you are ready to take on this journey with me, send me an email.</p>
-                <a href="mailto:contact@designwithamy.com" class="btn btn__white">Get In Touch</a>
-            </div>
-        </section>
+        <%- include('partials/contact') %>
     </main>
+
     <%- include('partials/footer') %>
-    <script src="/js/index.js"></script>
+    <script src="/js/index.js" defer></script>
 </body>
 </html>

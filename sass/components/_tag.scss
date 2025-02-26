@@ -1,0 +1,18 @@
+.tag{
+    margin-bottom: 5rem;
+    // background-color: aquamarine;
+    &__list{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+    }
+    &__item{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        background-color: $gray-color;
+        padding: 1rem 3.5rem;
+    }
+}
