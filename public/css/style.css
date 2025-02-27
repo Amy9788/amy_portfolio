@@ -183,20 +183,14 @@ body {
   background-color: #737373; }
 
 .btn__with-icon {
-  background-color: #2E6F5D;
-  display: inline-block; }
+  background-color: #2E6F5D; }
   @media only screen and (max-width: 56.25em) {
     .btn__with-icon {
+      display: block;
       margin-left: 0;
       margin-bottom: 1.8rem; } }
-  .btn__with-icon a {
-    text-decoration: none; }
-  .btn__with-icon .left-text {
-    color: #FFFFFF; }
   .btn__with-icon .right-icon {
     vertical-align: middle; }
-  .btn__with-icon .arrow-forward-icon {
-    width: 1.8rem; }
   .btn__with-icon:hover {
     background-color: #737373; }
 

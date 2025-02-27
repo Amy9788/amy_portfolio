@@ -39,22 +39,14 @@
     }
     &__with-icon{
         background-color: $green-color;
-        display: inline-block;
         @include respond(tab-port) {
+            display: block;
             margin-left: 0;
             margin-bottom: 1.8rem;
         }
-        a{
-            text-decoration: none;
-        }
-        .left-text{
-            color: $white-color;
-        }
+
         .right-icon{
             vertical-align: middle;
-        }
-        .arrow-forward-icon{
-            width: 1.8rem;
         }
         &:hover {
             background-color: $dark-gray-color;
